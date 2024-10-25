@@ -4,6 +4,25 @@
 
 The **SimpleTikTok** smart contract is a decentralized application that allows users to post and delete videos on the Ethereum blockchain. This contract mimics basic functionalities similar to a video-sharing platform, enabling users to manage their video content with unique identifiers.
 
+## Requirements Implementation
+
+The **SimpleTikTok** contract utilizes the following Solidity features to ensure proper functionality:
+
+- **`require`**: 
+  - Used to validate inputs and conditions. For example, in the `postVideo` function, it checks if the video URL is non-empty. It also ensures that the video ID being posted is unique.
+  - If a `require` condition fails, it reverts the transaction, returning an error message.
+
+- **`assert`**: 
+  - Used in the `deleteVideo` function to assert that a condition is true before proceeding with the deletion. Specifically, it checks that the video exists before deleting it.
+  - If the assertion fails, it will cause the transaction to revert, indicating a critical failure in the contract logic.
+
+- **`revert`**: 
+  - Implicitly used through `require` statements. If any condition checked by `require` fails, the transaction reverts, ensuring that no state changes are made to the contract.
+  - Custom error messages can be provided to inform users of the specific issue.
+
+These mechanisms help maintain the integrity of the contract and provide clear feedback to users when errors occur.
+
+
 ## Features
 
 - **Post Videos**: Users can upload videos by providing a URL.
