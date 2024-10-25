@@ -53,13 +53,52 @@ The **SimpleTikTok** smart contract is a decentralized application that allows u
 - **fallback()**: Accepts Ether without executing any specific logic.
 - **receive()**: Accepts Ether without executing any specific logic.
 
-## Installation
+## Executing the Program
 
-1. **Prerequisites**: 
-   - Install [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/).
-   - Set up an Ethereum development environment like [Remix IDE](https://remix.ethereum.org/).
+To run this program, you can use **Remix**, an online Solidity IDE. Follow these steps:
 
-2. **Clone the Repository** (if applicable):
-   ```bash
-   git clone https://github.com/yourusername/SimpleTikTok.git
-   cd SimpleTikTok
+1. **Go to the Remix website**: Navigate to [Remix IDE](https://remix.ethereum.org/).
+
+2. **Create a New File**:
+   - Click on the "+" icon in the left-hand sidebar.
+   - Name the file `SimpleTikTok.sol`.
+
+3. **Copy and Paste the Code**:
+   - Copy the provided smart contract code and paste it into the newly created file.
+
+4. **Compile the Code**:
+   - Click on the "Solidity Compiler" tab in the left-hand sidebar.
+   - Ensure that the "Compiler" option is set to version `0.8.18` (or another compatible version).
+   - Click on the "Compile SimpleTikTok.sol" button.
+
+5. **Deploy the Contract**:
+   - Click on the "Deploy & Run Transactions" tab in the left-hand sidebar.
+   - Select the `SimpleTikTok` contract from the dropdown menu.
+   - Click on the "Deploy" button.
+
+6. **Interact with the Deployed Contract**:
+   - After deploying, you will see the deployed contract instance appear in the "Deployed Contracts" section.
+   - Expand the deployed contract instance to view its functions.
+
+7. **Post a Video**:
+   - Find the `postVideo` function in the contract interface.
+   - Enter a valid video URL in the input field.
+   - Click on the "transact" button to post the video. Check the transaction logs to confirm the successful posting.
+
+8. **Delete a Video**:
+   - To delete a video, call the `deleteVideo` function.
+   - Enter the video ID of the video you want to delete.
+   - Click on the "transact" button. Confirm that the video has been successfully deleted by checking the transaction logs.
+
+9. **Check Video Status**:
+   - Use the `checkVideoPosted`, `checkVideoExists`, and `checkVideoDeleted` functions to check the status of videos by entering the corresponding video ID.
+   - Click on the respective function button to view the status.
+
+10. **View Events**:
+    - You can view the events emitted by the contract in the Remix console under the "Transactions" tab. This will provide you with logs for video posting and deletion.
+
+### Author:
+Neal Tracy D. Jestingor | 202111095@fit.edu.ph
+
+### License
+This project is licensed under the MIT License.
